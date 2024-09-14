@@ -1,0 +1,10 @@
+/* style.css */
+
+div .text {
+    background-color: #ffff00;
+    color: hwb(0 0% 0%);
+    font-size: 20px;
+    text-align: center;
+}
+
+/* I used the div type selector *and* the .text class selector, because I was just feeling so adventurous! */
