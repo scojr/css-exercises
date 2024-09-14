@@ -1,0 +1,18 @@
+/* style.css */
+
+.left,
+.right {
+    font-size: 28px;
+    font-family: Helvetica, "Times New Roman", sans-serif;
+}
+
+/* I used the grouping selectors for the purposes of the exercise, but initially it seemed most efficient to simply use the button selector to modify the shared styles instead*/
+
+.left {
+    background-color: rgb(0, 0, 0);
+    color: hsl(0, 0%, 100%);
+}
+
+.right {
+    background-color: hwb(60 0% 0%);
+}
