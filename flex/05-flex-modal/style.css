@@ -1,3 +1,5 @@
+/* This one took me awhile, and it's definitely messier than the official solution. I'm not entirely happy with how it turned out, in particular the margins look a little inconsistent, and for some reason the x-button's "x" is slightly off-center. */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 html, body {
@@ -19,20 +21,50 @@ body {
   background: white;
   width: 480px;
   border-radius: 10px;
+  padding: 12px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
 }
+
+.header {
+  font-weight: bold;
+  font-size: larger;
+}
+
+/* I use align-items: baseline here to align the header and body text */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin: 4px;
+}
+
+/* This gave me a lot of trouble. Using align-items:baseline on the previous selector made the x-button of the header move next to the text, as it reduced the size of the header's flexbox itself. I'm not even sure why! Using width:100% let the header span the full length of the box */
+.header-x {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 4px;
+}
+
+.buttons {
+  margin: 8px;
+}
+
 
 .icon {
   color: royalblue;
   font-size: 26px;
   font-weight: 700;
   background: lavender;
-  width: 42px;
+  min-width: 42px;
   height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 12px auto;
 }
 
 .close-button {
